@@ -4,6 +4,7 @@ var express = require ('express')
 var expresshbs = require ('express-handlebars')
 var path = require ('path')
 var bodyParser = require ('body-parser')
+var db = require('./db/db')
 
 var app = express()
 
@@ -23,7 +24,16 @@ app.get('/waenga', function(req, res){
 })
 
 app.get('/waenga/hui_katoa', function(req, res){
-  res.render('zoneIndex')
+  res.render('huiKatoa')
 })
+
+app.get('/waenga/:id', function(req, res){
+  var sectionId = Number(req.params.id)
+  db.getSection(sectionId)
+  .then(sectionData => {
+    res.render('sectionProfile', sectionData)
+  })
+})
+
 
 module.exports = app;
