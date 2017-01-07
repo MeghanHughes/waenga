@@ -15,29 +15,12 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static (path.join(__dirname, 'public')))
 
-// app.get('/', routes.getAllZones)
+
 app.get('/',routes.getAllZones);
 app.get('/waenga', routes.getAllZones);
-// app.get('/', function(req, res){
-//   res.redirect('/waenga')
-// })
-//
-// app.get('/waenga', function(req, res){
-//
-//   res.render('waenga')
-// })
-//
-// app.get('/waenga/hui_katoa', function(req, res){
-//   res.render('huiKatoa')
-// })
-//
-// app.get('/waenga/:id', function(req, res){
-//   var sectionId = Number(req.params.id)
-//   db.getSection(sectionId)
-//   .then(sectionData => {
-//     res.render('sectionProfile', sectionData)
-//   })
-// })
-
+// app.get('/waenga/new_zone', routes.addNewZone)
+app.get('/waenga/new_zone', function(req, res) {
+ res.render('new_zone')
+})
 
 module.exports = app;
