@@ -13,21 +13,13 @@
       <table>
         <tr>
           <th>Zone Name</th>
+          <th>Zone image</th>
         </tr>
         {{#each zoneTable}}
         <tr>
-          <td>{{zone_name}}</td>
-        </tr>
-        {{/each}}
-      </table>
-      <table>
-        <tr>
-          <th>Zone image</th>
-        </tr>
-        {{#each imagesTable}}
-        <tr>
-          <td><img src="{{url}}"></td>
-        </tr>
+         <td><a class="link" href="/waenga/{{zone_id}}">{{zone_name}}</a></td>
+         <td><a class="link" href="/waenga/{{zone_id}}">{{zoneImage}}</a></td>
+       </tr>
         {{/each}}
       </table>
 

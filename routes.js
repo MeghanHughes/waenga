@@ -1,21 +1,31 @@
 var db = require('./db/db')
 
-function getAllZones(req, res){
+function getAllZones(req, res) {
   db.listAllZones()
   .then(zoneTable => {
     res.render('waenga', {'zoneTable': zoneTable})
   })
 }
-//
-// function addNewZone(req,res){
-//   var newZoneName = req.body
-//   db.addNewZone(newZoneName)
-//   .then(function(){
+
+function getZoneProfile(req, res) {
+  console.log(req.params)
+  var zoneId = Number(req.params.id)
+  db.listZoneProfile(zoneId)
+    .then(function(zoneData) {
+    res.render('zoneProfile', zoneData[0])
+  })
+}
+
+// function addNewZone(req,res) {
+//   var newZone = req.body
+//   db.addNewZone(newZone)
+//   .then(function() {
 //     res.redirect('/')
 //   })
 // }
 
 module.exports = {
   getAllZones: getAllZones,
+  getZoneProfile:getZoneProfile
   // addNewZone: addNewZone
 }

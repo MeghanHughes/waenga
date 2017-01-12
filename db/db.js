@@ -9,41 +9,17 @@ function listAllZones(){
   return knex('zoneTable')
   .select('*')
 }
-function listProjectData(projectID){
-  return knex('projects_ppe')
-  .join('projects','proj_id','=','projects.project_id')
-  .join('ppeGear','ppeGear_id','=','ppeGear.ppe_id')
-  .select('*')
-  .where('projects.project_id',projectID)
-  .then(transformData)
-}
 
-function joinZoneImage(zone_id){
-  return knex('zoneImage')
-  .join('zoneTable', 'zone_id', '=', 'zoneTable.zone_id')
-  .join('')
+function listZoneProfile(zoneId){
+  return knex('zoneTable')
+    .where('zoneTable.zone_id', zoneId)
 
 }
 
-// function addNewZoneName(newZoneName){
-//   var newZoneName = {
-//   zone_name: newZoneName.name
-//   return knex ('zoneTable')
-//   .insert(newZoneName)
-//   })
-// }
-//
-// function addNewHazardData(newHazardData, projectID){
-//     delete newHazardData.submit
-//     return knex('hazards')
-//     .insert(newHazardData)
-//     .then(function(hazard_id){
-//       return addIdsToProjHazTable(projectID,hazard_id)
-// })
 
 module.exports = {
   listAllZones: listAllZones,
-  // addNewZone: addNewZone
+  listZoneProfile: listZoneProfile
 }
 
 
