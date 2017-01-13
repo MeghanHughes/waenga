@@ -1,7 +1,7 @@
 
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('descriptorsTable', function(t){
-    t.integer('desc_id');
+    t.increments('id');
     t.string('aspect');
     t.string('soil_cond');
     t.string('landscape');

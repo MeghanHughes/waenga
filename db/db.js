@@ -16,10 +16,20 @@ function listZoneProfile(zoneId){
 
 }
 
+function addNewZoneData(req, res){
+  var newZoneData ={
+    zone_name: req.body
+  }
+  return knex('zoneTable')
+    .insert(newZoneData)
+}
+
+
 
 module.exports = {
   listAllZones: listAllZones,
-  listZoneProfile: listZoneProfile
+  listZoneProfile: listZoneProfile,
+  addNewZoneData: addNewZoneData
 }
 
 

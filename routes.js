@@ -16,16 +16,16 @@ function getZoneProfile(req, res) {
   })
 }
 
-// function addNewZone(req,res) {
-//   var newZone = req.body
-//   db.addNewZone(newZone)
-//   .then(function() {
-//     res.redirect('/')
-//   })
-// }
+function addNewZone(req, res) {
+  var newZone = req.body
+  db.addNewZoneData(newZone)
+  .then(function(new_zone) {
+    res.redirect('/')
+  })
+}
 
 module.exports = {
   getAllZones: getAllZones,
-  getZoneProfile:getZoneProfile
-  // addNewZone: addNewZone
+  getZoneProfile:getZoneProfile,
+  addNewZone:addNewZone
 }

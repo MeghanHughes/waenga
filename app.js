@@ -21,8 +21,10 @@ app.get('/waenga', routes.getAllZones);
 // app.get('/waenga/new_zone', routes.addNewZone)
 app.get('/waenga/new_zone', function(req, res) {
  res.render('new_zone');
-})
-app.get('/waenga/:id', routes.getZoneProfile)
+});
+app.post('/new_zone', routes.addNewZone);
+// app.post('new_zone', routes.addNewZone);
+app.get('/waenga/:id', routes.getZoneProfile);
 
 // app.get('/waenga/:id', function(req, res){
 //   var zoneId = Number(req.params.id)
