@@ -17,8 +17,8 @@ function listZoneProfile(zoneId){
 }
 
 function addNewZoneData(req, res){
-  var newZoneData ={
-    zone_name: req.body
+  var newZoneData = {
+    zone_name: req.params
   }
   return knex('zoneTable')
     .insert(newZoneData)
