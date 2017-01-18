@@ -7,8 +7,7 @@ function getAllZones(req, res) {
   })
 }
 
-function getZoneProfile(req, res) {
-  console.log(req.params)
+function getZoneProfile(req, res){
   var zoneId = Number(req.params.id)
   db.listZoneProfile(zoneId)
     .then(function(zoneData) {

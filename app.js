@@ -26,6 +26,7 @@ app.post('/new_zone', routes.addNewZone);
 // app.post('new_zone', routes.addNewZone);
 app.get('/waenga/:id', routes.getZoneProfile);
 
+// app.get('waenga/:id/edit', routes.editForm)
 // app.get('/waenga/:id', function(req, res){
 //   var zoneId = Number(req.params.id)
 //   db.listZoneProfile(zoneId)

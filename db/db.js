@@ -16,15 +16,22 @@ function listZoneProfile(zoneId){
 
 }
 
-function addNewZoneData(req, res){
-  var newZoneData = {
-    zone_name: req.params
-  }
+function addNewZoneData(newZoneData){
+  delete newZoneData.submit
   return knex('zoneTable')
     .insert(newZoneData)
+    .then(function(id){
+      return updateZoneId(id[0])
+    })
 }
 
-
+function updateZoneId(id){
+  return knex ('zoneTable')
+    .where('zoneTable.rowid', id)
+    .update({
+      zone_id: id
+    })
+}
 
 module.exports = {
   listAllZones: listAllZones,
