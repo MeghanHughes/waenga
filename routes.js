@@ -23,6 +23,10 @@ function addNewZone(req, res) {
   })
 }
 
+// function editProfile(req, res) {
+//   var
+// }
+
 module.exports = {
   getAllZones: getAllZones,
   getZoneProfile:getZoneProfile,

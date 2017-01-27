@@ -2,42 +2,99 @@
   <a class="link" href="/">Back to home</a> </br>
 </nav>
 <h1>Add a new zone to the waenga index.</h1>
-<form action ="/new_zone" method = "post">
-     <table>
-       <tr> <th>Zone name</th>
-         <td><input placeholder="zone name" type="text" name="zone_name"/>
-         </td>
-       </tr>
-     </table>
-       <!-- <tr> <th>Description: </th>
-         <td><input placeholder="description" type="text" name="description"/>
-           </td>
-       </tr> -->
-      <table>
-       <!-- <tr> <th>Image </th>
-         <td><input placeholder="Upload Image" type="url" name="image"/>
-         </td>
-       </tr> -->
-       <input type="submit" name = "submit" value = "submit" />
-     </table>
-</div>
 
-<!-- <div class="container">
-    <h2>Description</h2>
-<p> Aspect</p>
-  <form>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">North
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">South
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">East
-    </label>
-    <label class="radio-inline">
-      <input type="radio" name="optradio">West
-    </label>
+
+<div class="container">
+    <h2>New Zone</h2>
+    <form action ="/new_zone" method = "post">
+    <input placeholder="zone name" type="text" name="zone_name"/>
+
+      <h3>Aspect</h3>
+      <div class = 'description_form'>
+        <label class="radio-inline">
+          <input type="radio" name="aspect" value="North">North
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="aspect" value="South">South
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="aspect" value="East">East
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="aspect" value="West">West
+        </label>
+  </div>
+
+        <h3>Soil Condition</h3>
+        <div class = 'description_form'>
+          <label class="radio-inline">
+            <input type="radio" name="soil_cond" value="Good">Good
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="soil_cond" value="Improving">Improving
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="soil_cond" value="Average">Average
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="soil_cond" value="Poor">Poor
+          </label>
+        </div>
+
+        <h3>Landscape</h3>
+        <div class = 'description_form'>
+          <label class="radio-inline">
+            <input type="radio" name="landscape" value="Steep slope">Steep slope
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="landscape" value="Slight slope">Slight slope
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="landscape" value="Flat">Flat
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="landscape" value="Planterbox">Planterbox
+          </label>
+        </div>
+
+        <h3>Exposure</h3>
+        <div class = 'description_form'>
+          <label class="radio-inline">
+            <input type="radio" name="exposure" value="Exposed">Exposed
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="exposure" value="Sheltered">Sheltered
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="exposure" value="Varied">Varied
+          </label>
+        </div>
+
+        <h3>Access</h3>
+        <div class = 'description_form'>
+          <label class="radio-inline">
+            <input type="radio" name="access" value="Easy">Easy
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="access" value="Difficult">Difficult
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="access" value="Very difficult">Very difficult
+          </label>
+        </div>
+
+        <h3>Weed Control</h3>
+        <div class = 'description_form'>
+          <label class="radio-inline">
+            <input type="radio" name="weed_control" value="Under control">Under control
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="weed_control" value="Out of control">Out of control
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="weed_control" value="Requires regular maintanance">Requires regular maintanance
+          </label>
+        </div>
    <input type="submit" name = "submit" value = "submit" />
  </form>
-</div> -->
+</div>
