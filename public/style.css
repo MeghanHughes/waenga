@@ -4,3 +4,7 @@ body {
   padding: 50px;
   font:14px, Helvetica, Arial, sans-serif;
 }
+
+.description_form {
+  margin: 0 0 20px 0;
+}

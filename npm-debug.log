@@ -1,0 +1,17 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/local/bin/npm', 'stars' ]
+2 info using npm@4.0.5
+3 info using node@v4.2.6
+4 verbose stack Error: 'npm stars' on your own user account requires auth
+4 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/stars.js:16:24)
+4 verbose stack     at nextTickCallbackWith0Args (node.js:419:9)
+4 verbose stack     at process._tickCallback (node.js:348:13)
+5 verbose cwd /home/meghan/workspace/waenga
+6 error Linux 4.4.0-59-generic
+7 error argv "/usr/bin/nodejs" "/usr/local/bin/npm" "stars"
+8 error node v4.2.6
+9 error npm  v4.0.5
+10 error code ENEEDAUTH
+11 error need auth 'npm stars' on your own user account requires auth
+12 error need auth You need to authorize this machine using `npm adduser`
+13 verbose exit [ 1, true ]
